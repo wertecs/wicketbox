@@ -1,2 +1,5 @@
 .idea
 WicketBox.iml
+target/
+wicket.iml
+velocity.log
