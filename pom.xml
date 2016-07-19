@@ -163,6 +163,7 @@
     </dependencies>
 
     <build>
+        <finalName>wicket</finalName>
         <resources>
             <resource>
                 <filtering>false</filtering>

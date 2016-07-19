@@ -1,5 +1,7 @@
 package eu.lovinger;
 
+import eu.lovinger.model.widget.SampleModel;
+import eu.lovinger.widgets.SampleWidget;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.WebPage;
@@ -19,10 +21,17 @@ public class HomePage extends WebPage {
 	 * @param parameters
 	 *            Page parameters
 	 */
-    public HomePage(final PageParameters parameters) {
+    public HomePage() {
 
+
+    }
+
+    @Override
+    protected void onInitialize() {
+        super.onInitialize();
         // Add the simplest type of label
         add(new Label("message", "If you see this message wicket is properly configured and running"));
+        add(new SampleWidget("sample", new SampleModel()));
 
         // TODO Add your page's components here
     }
